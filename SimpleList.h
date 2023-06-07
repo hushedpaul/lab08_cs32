@@ -14,8 +14,8 @@ class SimpleList{
 		~SimpleList();
 		//T at(int index) const throw (InvalidIndexException);
 		T at(int index) const;
-        void destroy(T element);
-        void destroy(T* element);
+        //void destroy(T element);
+        //void destroy(T* element);
 		bool empty() const;
 		//T first() const throw (EmptyListException);
 		//T last() const throw (EmptyListException);
