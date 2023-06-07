@@ -16,9 +16,7 @@ void SimpleList<T>::destroy(T* element){
 template <class T>
 SimpleList<T>::~SimpleList() {
      for(int i = 0; i < numElements; i ++){
-          if(std::is_pointer<T>::value){
               delete(elements[i]);
-              }
       }
       delete[] elements;
    
@@ -82,9 +80,8 @@ void SimpleList<T>::remove(int index) {
     }else if((index >= numElements) || (index < 0)){
         throw InvalidIndexException();
     }else{
-        if(std::is_pointer<T>::value){
             delete (elements[index]);
-            }
+            
         for(int i = index; i < numElements -1; i ++){
             elements[i] = elements[i +1];
         }
